@@ -1,0 +1,196 @@
+.leadership {
+  background: white;
+  color: #333;
+  border-bottom: 4px solid #667eea;
+}
+
+.leadership-timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.leadership-timeline::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.leadership-item {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-left: 80px;
+}
+
+.leadership-dot {
+  position: absolute;
+  left: 18px;
+  top: 1rem;
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.8rem;
+  z-index: 2;
+}
+
+.leadership-item.current .leadership-dot {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(102, 126, 234, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(102, 126, 234, 0); }
+}
+
+.leadership-content {
+  background: white;
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  text-align: left;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.1);
+}
+
+.leadership-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.position-info {
+  flex: 1;
+}
+
+.leadership-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.position-icon {
+  font-size: 1.2rem;
+}
+
+.leadership-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.organization {
+  font-weight: 600;
+  color: #667eea;
+}
+
+.location, .duration {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.current-badge {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  white-space: nowrap;
+}
+
+.leadership-description {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #555;
+}
+
+.leadership-responsibilities {
+  margin-top: 1.5rem;
+}
+
+.leadership-responsibilities h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.leadership-responsibilities h4::before {
+  content: '🎯';
+  font-size: 1rem;
+}
+
+.leadership-responsibilities ul {
+  padding-left: 1rem;
+  list-style: none;
+}
+
+.leadership-responsibilities li {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.leadership-responsibilities li::before {
+  content: '▸';
+  color: #667eea;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+@media (max-width: 768px) {
+  .leadership-timeline::before {
+    left: 15px;
+  }
+  
+  .leadership-item {
+    padding-left: 50px;
+  }
+  
+  .leadership-dot {
+    left: 3px;
+  }
+  
+  .leadership-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .current-badge {
+    align-self: flex-start;
+  }
+  
+  .leadership-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .leadership-title {
+    font-size: 1.2rem;
+  }
+}
