@@ -2,6 +2,17 @@
   text-align: center;
 }
 
+/* Prevent horizontal scroll on mobile */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 .section {
   padding: 80px 20px;
   max-width: 1200px;

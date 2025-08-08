@@ -30,8 +30,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: calc(100% - 20px);
-  /* Slightly reduce width from right */
+  width: 100%;
   height: 100%;
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(102, 126, 234, 0.2);
@@ -139,6 +138,8 @@
   display: flex;
   justify-content: center;
   margin-top: auto;
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .project-link {
@@ -185,13 +186,13 @@
 }
 
 .carousel-nav.prev {
-  left: -75px;
-  /* Distance from left edge of project card */
+  left: calc(0% - 80px);
+  /* Position relative to container edge */
 }
 
 .carousel-nav.next {
-  right: -75px;
-  /* Same distance from right edge of project card */
+  right: calc(0% - 80px);
+  /* Position relative to container edge */
 }
 
 /* Dot Indicators */
@@ -225,19 +226,49 @@
 
 @media (max-width: 768px) {
   .projects {
-    padding: 2rem 1rem;
+    padding: 2rem 2rem 3rem 2rem;
+    /* Increase bottom padding to show card boundary */
   }
 
   .projects-carousel-container {
     max-width: 100%;
+    margin: 0 auto;
   }
 
   .project-display {
-    height: 500px;
+    height: 680px;
+    /* Increase display area to show full card boundary */
+    overflow: visible;
+    /* Allow card to show fully */
+  }
+
+  .project-card {
+    width: 85%;
+    /* Reduce card width */
+    left: 7.5%;
+    /* Center the narrower card */
+    height: auto;
+    /* Let card height adjust to content */
+    min-height: 620px;
+    /* Ensure minimum height for content */
+    /* Set specific card height */
+    overflow: hidden;
+    /* Ensure content stays within card */
   }
 
   .project-content {
     padding: 1.5rem;
+  }
+
+  .project-links {
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .project-link {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
   }
 
   .carousel-nav {
@@ -248,12 +279,10 @@
 
   .carousel-nav.prev {
     left: -60px;
-    /* Distance from project card edge */
   }
 
   .carousel-nav.next {
     right: -60px;
-    /* Same distance from project card edge */
   }
 
   .dot {
@@ -278,11 +307,39 @@
 
 @media (max-width: 480px) {
   .projects {
-    padding: 2rem 0.5rem;
+    padding: 2rem 1.5rem 3.5rem 1.5rem;
+    /* Increase bottom padding even more on small screens */
+  }
+
+  .project-display {
+    height: 720px;
+    /* Increase display area for very small screens */
+    overflow: visible;
+    /* Allow card to show fully */
+  }
+
+  .project-card {
+    width: 80%;
+    /* Even narrower card on very small screens */
+    left: 10%;
+    /* Center the narrower card */
+    height: auto;
+    /* Let card height adjust to content */
+    min-height: 660px;
+    /* Ensure minimum height for content */
   }
 
   .project-content {
     padding: 1rem;
+  }
+
+  .project-links {
+    gap: 0.5rem;
+  }
+
+  .project-link {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
   }
 
   .carousel-nav {
@@ -293,12 +350,10 @@
 
   .carousel-nav.prev {
     left: -55px;
-    /* Distance from project card edge */
   }
 
   .carousel-nav.next {
     right: -55px;
-    /* Same distance from project card edge */
   }
 
   .project-title {

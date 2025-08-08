@@ -7,7 +7,8 @@
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  width: 100%;
 }
 
 .hero::before {
@@ -201,12 +202,15 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding: 120px 2rem 60px 2rem;
+    padding: 120px 1rem 60px 1rem; /* Reduce padding to prevent overflow */
+    overflow-x: hidden;
   }
   
   .hero-content {
     grid-template-columns: 1fr;
     text-align: center;
+    width: 100%;
+    max-width: 100%;
   }
 
   .hero-title {
@@ -224,30 +228,32 @@
 
   .hero-visual {
     height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
-  /* Mobile spacing for floating elements */
-  .floating-element.python {
-    top: 10%;
-    left: 2%;
+  .floating-elements {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-
-  .floating-element.ml {
-    top: 2%;
-    right: 8%;
-  }
-
-  .floating-element.ai {
-    bottom: 40%;
-    left: 5%;
-  }
-
-  .floating-element.data {
-    bottom: 10%;
-    right: 2%;
+  
+  /* Hide floating elements on mobile */
+  .floating-element {
+    display: none;
   }
   
   .profile-image {
-    top: 35%;
+    position: relative; /* Change from absolute to relative */
+    top: auto;
+    left: auto;
+    transform: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
