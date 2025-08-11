@@ -236,8 +236,8 @@
   }
 
   .project-display {
-    height: 680px;
-    /* Increase display area to show full card boundary */
+    height: 700px;
+    /* Increased to accommodate taller cards */
     overflow: visible;
     /* Allow card to show fully */
   }
@@ -247,11 +247,8 @@
     /* Reduce card width */
     left: 7.5%;
     /* Center the narrower card */
-    height: auto;
-    /* Let card height adjust to content */
-    min-height: 620px;
-    /* Ensure minimum height for content */
-    /* Set specific card height */
+    height: 650px;
+    /* Increased height to show buttons */
     overflow: hidden;
     /* Ensure content stays within card */
   }
@@ -312,8 +309,8 @@
   }
 
   .project-display {
-    height: 720px;
-    /* Increase display area for very small screens */
+    height: 730px;
+    /* Increased for very small screens */
     overflow: visible;
     /* Allow card to show fully */
   }
@@ -323,10 +320,8 @@
     /* Even narrower card on very small screens */
     left: 10%;
     /* Center the narrower card */
-    height: auto;
-    /* Let card height adjust to content */
-    min-height: 660px;
-    /* Ensure minimum height for content */
+    height: 680px;
+    /* Increased height to show buttons */
   }
 
   .project-content {
