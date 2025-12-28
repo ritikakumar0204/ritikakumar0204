@@ -1,41 +1,163 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@layer base {
+  :root {
+    --background: 250 25% 5%;
+    --foreground: 250 10% 95%;
+
+    --card: 250 25% 8%;
+    --card-foreground: 250 10% 95%;
+
+    --popover: 250 25% 8%;
+    --popover-foreground: 250 10% 95%;
+
+    --primary: 275 60% 55%;
+    --primary-foreground: 250 10% 98%;
+
+    --secondary: 275 40% 15%;
+    --secondary-foreground: 250 10% 95%;
+
+    --muted: 250 20% 12%;
+    --muted-foreground: 250 10% 60%;
+
+    --accent: 275 50% 25%;
+    --accent-foreground: 250 10% 95%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 275 30% 18%;
+    --input: 275 30% 18%;
+    --ring: 275 60% 55%;
+
+    --radius: 0.75rem;
+
+    /* Custom colors */
+    --purple-glow: 275 80% 60%;
+    --purple-deep: 275 60% 20%;
+    --purple-darker: 280 50% 12%;
+
+    /* Gradients */
+    --gradient-purple: linear-gradient(135deg, hsl(280 60% 15%) 0%, hsl(280 50% 26%) 100%);
+    --gradient-section: linear-gradient(180deg, transparent 0%, hsl(275 40% 8% / 0.5) 50%, transparent 100%);
+    --gradient-glow: radial-gradient(ellipse at center, hsl(275 80% 60% / 0.15) 0%, transparent 70%);
+
+    /* Shadows */
+    --shadow-glow: 0 0 60px hsl(275 80% 60% / 0.2);
+    --shadow-card: 0 4px 30px hsl(275 60% 20% / 0.3);
+    --shadow-button: 0 4px 20px hsl(275 80% 60% / 0.3);
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    --background: 250 25% 5%;
+    --foreground: 250 10% 95%;
+  }
 }
 
-body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-  min-height: 100vh;
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  ::selection {
+    @apply bg-primary/30 text-foreground;
+  }
 }
 
-code {
-  font-family: 'JetBrains Mono', source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components {
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(275 80% 70%) 0%, hsl(320 70% 65%) 100%);
+  }
+
+  .section-divider {
+    @apply w-full h-px;
+    background: linear-gradient(90deg, transparent 0%, hsl(275 60% 35%) 50%, transparent 100%);
+  }
+
+  .glow-effect {
+    position: relative;
+  }
+
+  .glow-effect::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, hsl(275 80% 60% / 0.5) 0%, hsl(320 70% 60% / 0.3) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card);
+  }
 }
 
-html {
-  scroll-behavior: smooth;
-}
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
 
-::-webkit-scrollbar {
-  width: 8px;
-}
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
 
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
 
-::-webkit-scrollbar-thumb {
-  background: #667eea;
-  border-radius: 4px;
-}
+  .animate-pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #764ba2;
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out forwards;
+  }
+
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-slide-in-left {
+    animation: slide-in-left 0.6s ease-out forwards;
+  }
+
+  @keyframes slide-in-left {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
 }
