@@ -2,6 +2,14 @@ import { FolderGit2, Github, ExternalLink } from 'lucide-react';
 
 const projects = [
   {
+    title: 'COS AI: An AI Chief of Staff',
+    description:
+      'Agent orchestration platform built with MCP-style integrations and tool calling for organizational decision support. Integrated LLM APIs with structured outputs and prompt design to improve response reliability and reduce hallucinations.',
+    technologies: ['MCP', 'ElevenLabs', 'LLM', 'Mistral', 'TypeScript', 'React', 'Vite', 'Uvicorn'],
+    github: 'https://github.com/ritikakumar0204/cos-ai',
+    featured: true,
+  },
+  {
     title: 'Vani: AI Research Companion',
     description:
       'Agentic RAG platform built with LangGraph, Vertex AI, and FAISS for deep research synthesis. Specialized Researcher/Reviewer/Synthesizer agents produce citation-backed academic reports and real-time thesis defense feedback.',

@@ -7,6 +7,8 @@ const leadership = [
     period: 'Sep 2025 - Present · Boston, MA',
     description: [
       'Represent MS student perspectives on curriculum and student experience improvements.',
+      'Participate in biweekly advisory meetings to surface MS student feedback across four institutional pillars — academics, research, co-op, and co-curricular experience — informing college-level decisions on curriculum design and student outcomes',
+      "Bridge the gap between student needs and faculty/administrative priorities by advocating for graduate experience improvements within Khoury College's structured continuous improvement framework"
     ],
   },
   {
@@ -14,7 +16,11 @@ const leadership = [
     org: 'Northeastern University',
     period: 'Sep 2025 - Present · Boston, MA · Part-time',
     description: [
-      'Provide graduate-level academic support and assist with program operations.',
+      'Spearheaded Graduate Professional & Student Appreciation Week (GPSAW), a university-wide initiative engaging 400+ graduate students through cross-departmental coordination, end-to-end event logistics, and full project ownership across programming, budgeting, and execution',
+      'Conceptualized and launched Care Drops, an independent student wellness initiative for the graduate community, demonstrating ownership from ideation through delivery with zero prior precedent.',
+      'Contributed to 3 recurring semester-long event series designed to foster belonging and engagement among graduate students, supporting programming continuity and iterative improvement across two academic semesters',
+      'Analyzed enrollment melt and engagement trend data to inform programming decisions and resource allocation; maintained budget tracking and collaborated across university departments to align events with institutional priorities'
+
     ],
   },
   {
@@ -34,6 +40,7 @@ const leadership = [
     period: 'Jul 2025 - Aug 2025 · Boston, MA · On-site',
     description: [
       'Supported instruction and student learning for CS 1800 Discrete Structures.',
+      'Held office hours and provided targeted support to undergraduate students on core discrete mathematics concepts including logic, proofs, set theory, and combinatorics, reinforcing comprehension alongside primary instruction'
     ],
   },
   {

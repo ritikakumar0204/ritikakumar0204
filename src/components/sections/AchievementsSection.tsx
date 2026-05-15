@@ -3,6 +3,12 @@ import { Trophy, Award, Star, Medal, ExternalLink } from 'lucide-react';
 const achievements = [
   {
     icon: Award,
+    title: 'Graduate Community Award',
+    year: '2026',
+    description: 'Awarded by Khoury College of Computer Sciences for active engagement and upliftment of the STEM community; received plaque and $1,000.',
+  },
+  {
+    icon: Award,
     title: 'Best Poster - Technical Depth',
     year: '2025',
     description: "Recognized at Khoury Master's Research Showcase for technical rigor in research presentation.",

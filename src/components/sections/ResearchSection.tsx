@@ -5,13 +5,13 @@ const publications = [
     title: 'ICD Codes Extraction from Clinical Notes Using Large Language Models',
     authors: 'Advisor: Dr. Deahan Yu',
     venue: 'Khoury Research Apprentice Scholarship (50% tuition waiver) | Best Poster - Technical Depth',
-    year: 'Aug 2025 - Present',
-    link: '',
+    year: 'Aug 2025 - Apr 2026',
+    link: 'https://www.proquest.com/dissertations-theses/automated-icd-code-prediction-via-pairwise/docview/3337212488/se-2',
     abstract:
-      'Formulating reliable multi-label ICD-10 prediction for long-form clinical notes. Fine-tuning BioMistral-7B with QLoRA across distributed GPUs while experimenting with hierarchical supervision, label-space decomposition, and prompt-finetune hybrids to improve rare-code recall and parent-child consistency.',
+      'Designed and trained transformer-based generative AI models for ICD-10 clinical prediction on large structured healthcare datasets, building reproducible pipelines for data processing, training, and evaluation (F1, AUC, precision/recall).',
     milestones: [
-      'Designed scalable multi-GPU training workflows with monitoring and failure-mode analysis.',
-      'Exploring hybrid prompting plus finetuning strategies for long-context clinical reasoning.',
+      'Fine-tuned BioMistral-7B with Hugging Face Transformers and QLoRA using chain-of-thought style reasoning evaluation; reduced GPU memory consumption by 30% while maintaining competitive performance.',
+      'Applied embedding models and vector search via structured feature representation and dimensionality reduction; benchmarked across architectures to cut experiment turnaround by 40%.',
     ],
   },
 ];
