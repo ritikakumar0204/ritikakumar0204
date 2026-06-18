@@ -27,6 +27,13 @@ Currently open to **AI Engineer** and **ML Engineer** roles.
 
 **[Stock Analytics Platform](https://github.com/ritikakumar0204/stock-analytics-platform)** — Automated pipeline to ingest stock market data and generate analytical reports for trend and volatility analysis. Built with BigQuery, PostgreSQL, and Streamlit.
 
+**[Abnormality detection based on musculoskeletal radiographs](https://github.com/nohrg/DS-5220-Final-Project)** — Developed and benchmarked CNN, ResNet-50, and DenseNet-121 models to classify 14K+ musculoskeletal radiographs across 7 upper-extremity joint classes, achieving up to 84.7% test accuracy (Humerus) and 83% (Wrist), outperforming published baselines by +11%
+
+**[Visual QnA on VizWiz dataset](https://github.com/ritikakumar0204/Visual-Question-Answering-on-Vizwiz-Dataset)** — Visual Question Answering (VQA) system designed to assist visually impaired individuals in understanding visual scenes by answering natural language questions about images. By leveraging computer vision, natural language processing, and assistive technologies, the system enhances accessibility for visually impaired users.
+
+**[Cross-lingual Translation using Large Language Models](https://github.com/Varsha-Ranganathan/CrossLingual-Translation-Models)** — Exploring Cross-Lingual Capabilities exhibited by Pre-Trained Models for Indian Language Translation Tasks
+
+
 ---
 
 ## Research
