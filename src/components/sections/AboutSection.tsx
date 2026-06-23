@@ -46,7 +46,7 @@ const AboutSection = () => {
               <Github size={24} />
             </a>
             <a
-              href="https://linkedin.com/in/ritika-kumar"
+              href="https://www.linkedin.com/in/ritika-kumar-98a393191/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 text-muted-foreground hover:text-primary transition-colors duration-200 hover:-translate-y-1 transform"
